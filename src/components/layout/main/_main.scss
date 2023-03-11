@@ -1,0 +1,38 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.title {
+    color: #fff;
+}
+
+.container-button-valueSent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-about-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.css-1do2vq8-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: 1px solid #fff !important;
+}
+
+.container-info-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+

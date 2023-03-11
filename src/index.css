@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: arial;
+  color: #fff;
+  background: linear-gradient(#121212, #212b46);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+  color: #fff;
+}
+
+.container-button-valueSent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-about-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.css-1do2vq8-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 1px solid #fff !important;
+}
+
+.container-info-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}/*# sourceMappingURL=index.css.map */
