@@ -76,9 +76,9 @@ export default function Main(props: TypeTitle){
              
             {showInfoCompletely && (
              <div className='container-about-information'>
-                <p>Estado: {cepInfo.localidade}</p>
-                <p>Bairro: {cepInfo.logradouro}</p>
-                <p>Rua: {cepInfo.bairro}</p>
+                <p>{cepInfo.localidade}</p>
+                <p>{cepInfo.logradouro}</p>
+                <p>{cepInfo.bairro}</p>
              </div>
             )}
         </div>
