@@ -7,6 +7,7 @@ import { TypeValueInput } from '../../../interface/GlobalTypes'; // tipagens
 import { TypeInfoCep } from '../../../interface/GlobalTypes'; // tipagens
 import { TypeTitle } from '../../../interface/GlobalTypes'; // tipagens
 import { api } from '../../../services/api'; // api
+import {  toast } from 'react-toastify';
 
 
 
@@ -28,13 +29,11 @@ export default function Main(props: TypeTitle){
         bairro: ''
     })
 
-    const [showInfoCompletely, setShowInfoCompletely]= useState(false)
-
     const handleSearch = () => { // button que vai pesquisar o cep e retorna-lo (ONCLICK)
        if(info.value === ''){
-        return alert('Coloque algo!')
+        return toast.error('campo vazio!')
        }  else if (info.value.length !== 8){
-        return alert('Coloque um CEP Válido de 8 números.')
+        return toast.error('Coloque um CEP Válido de 8 números.')
        } 
         const fetchCep = async() => {
             try{
@@ -45,9 +44,8 @@ export default function Main(props: TypeTitle){
             }
         }
         fetchCep() 
+        toast.success('CEP encontrado com sucesso.')
 
-         setShowInfoCompletely(!showInfoCompletely) // aqui eu to fazendo com que o estado seja diferente de falso ai vou fazer 
-        // // a verificação ali embaixo para mostrar o componente.
     }
 
     return (
@@ -74,13 +72,11 @@ export default function Main(props: TypeTitle){
                <p>{info.value.replace(/\D/g, '')}</p>
             </div>
              
-            {showInfoCompletely && (
              <div className='container-about-information'>
                 <p>{cepInfo.localidade}</p>
                 <p>{cepInfo.logradouro}</p>
                 <p>{cepInfo.bairro}</p>
-             </div>
-            )}
+             </div> 
         </div>
     )
 }

@@ -11,5 +11,4 @@ export type TypeInfoCep = { // tipando as informações que vem da API ao digita
     localidade: string;
     bairro: string;
     logradouro: string;
-
 }
