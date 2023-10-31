@@ -29,6 +29,8 @@ export default function Main(props: TypeTitle){
         bairro: ''
     })
 
+    const [click, setClick] = useState<boolean>(false)
+
     const handleSearch = () => { // button que vai pesquisar o cep e retorna-lo (ONCLICK)
        if(info.value === ''){
         return toast.error('campo vazio!')
@@ -44,6 +46,7 @@ export default function Main(props: TypeTitle){
             }
         }
         fetchCep() 
+        setClick(true)
         toast.success('CEP encontrado com sucesso.')
 
     }
@@ -73,9 +76,13 @@ export default function Main(props: TypeTitle){
             </div>
              
              <div className='container-about-information'>
-                <p>Estado: {cepInfo.localidade}</p>
-                <p>Rua: {cepInfo.logradouro}</p>
-                <p>Bairro: {cepInfo.bairro}</p>
+                {click && (
+                   <>
+                    <p>Estado: {cepInfo.localidade}</p>
+                    <p>Rua: {cepInfo.logradouro}</p>
+                    <p>Bairro: {cepInfo.bairro}</p>
+                   </>
+                )}
              </div> 
         </div>
     )
