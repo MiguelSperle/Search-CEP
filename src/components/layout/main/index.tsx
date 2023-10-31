@@ -73,9 +73,9 @@ export default function Main(props: TypeTitle){
             </div>
              
              <div className='container-about-information'>
-                <p>{cepInfo.localidade}</p>
-                <p>{cepInfo.logradouro}</p>
-                <p>{cepInfo.bairro}</p>
+                <p>Estado: {cepInfo.localidade}</p>
+                <p>Rua: {cepInfo.logradouro}</p>
+                <p>Bairro: {cepInfo.bairro}</p>
              </div> 
         </div>
     )
